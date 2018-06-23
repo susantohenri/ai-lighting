@@ -40,6 +40,7 @@ class Migration_init extends CI_Migration {
         `role` varchar(255) NOT NULL,
         `firstname` varchar(255) NOT NULL,
         `lastname` varchar(255) NOT NULL,
+        `status` varchar(255) NOT NULL,
         PRIMARY KEY (`uuid`)
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8
     ");

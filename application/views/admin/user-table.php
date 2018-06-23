@@ -5,7 +5,7 @@
             <input name="action" id="action" type="hidden">
             <div class="row">
                 <div class="col-xs-12">
-                    <h4 style="margin:5px 0px;"><strong>HIGH BAYS AND PRICING</strong></h4>
+                    <h4 style="margin:5px 0px;"><strong>REGISTERED USERS</strong></h4>
                 </div>
             </div>
         </div>
@@ -50,8 +50,14 @@
       aoColumns: <?= json_encode($thead) ?>,
       fnRowCallback: function(nRow, aData, iDisplayIndex ) {
         $(nRow).css('cursor', 'pointer')
-        $(nRow).find('td').not(':eq(4)').click( function () {
+        $(nRow).find('.btn-edit').click( function () {
           window.location.href = '<?= site_url($current['controller']) ?>/read/' + aData.uuid
+        })
+        $(nRow).find('.btn-delete').click( function () {
+          window.location.href = '<?= site_url($current['controller']) ?>/delete/' + aData.uuid
+        })
+        $(nRow).find('.btn-status').click( function () {
+          window.location.href = '<?= site_url($current['controller']) ?>/status/' + aData.uuid
         })
       }
     })

@@ -5,6 +5,10 @@ class Companies extends MY_Model {
   function __construct () {
     parent::__construct();
     $this->table = 'company';
+    $this->thead = array(
+      (object) array('mData' => 'name', 'sTitle' => 'Name'),
+      (object) array('mData' => 'edit', 'sTitle' => '')
+    );
     $this->form  = array ();
 
     $this->form[]= array(
@@ -89,9 +93,16 @@ class Companies extends MY_Model {
       if (isset ($f['multiple'])) $f['value'] = explode(',', $record[$f['name']]);
       else if ($f['name'] === 'password') $f['value'] = '';
       else $f['value'] = $record[$f['name']];
-      if ('email' === $f['name']) $f['attributes'][] = array('disabled' => 'disabled');
+      if ('admin' !== $this->session->userdata('role') && 'email' === $f['name']) $f['attributes'][] = array('disabled' => 'disabled');
     }
     return $this->form;
+  }
+
+  function find ($param = array()) {
+    $this->db
+      ->select("{$this->table}.*")
+      ->select("'<a class=\"btn btn-primary\">Edit</a>' edit", false);
+    return parent::find($param);
   }
 
 }

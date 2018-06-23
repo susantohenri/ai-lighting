@@ -7,7 +7,9 @@ class Users extends MY_Model {
     $this->table = 'user';
     $this->thead = array(
       (object) array('mData' => 'email', 'sTitle' => 'Email'),
-      (object) array('mData' => 'company_name', 'sTitle' => 'Company')
+      (object) array('mData' => 'company_name', 'sTitle' => 'Company'),
+      (object) array('mData' => 'status_value', 'sTitle' => 'Status'),
+      (object) array('mData' => 'edit', 'sTitle' => '')
     );
     $this->form  = array ();
 
@@ -31,23 +33,25 @@ class Users extends MY_Model {
       'label'   => 'Password',
     );
 
-    $this->form[]= array(
-      'name'    => 'role',
-      'label'   => 'Role',
-      'options' => array(
-      	array('value' => 'admin', 'text' => 'Admin'),
-      	array('value' => 'company', 'text' => 'Company')
-      )
-    );
-
   }
 
   function find ($where = array()) {
   	$this->db
   		->select("{$this->table}.*")
   		->select('company.name company_name', false)
+      ->select("CASE WHEN 'active' = status THEN 'Active' WHEN 'inactive' = status THEN 'Inactive' END status_value", false)
+      ->select("
+        '<a class=\"btn btn-primary btn-edit\">Edit</a>'
+        '<a class=\"btn btn-danger btn-delete\">Delete</a>'
+        edit", false)
   		->join('company', 'company.user = user.uuid', 'left');
-  	return parent::find($where);
+  	$records = parent::find($where);
+    foreach ($records as &$record) {
+      $set = 'Set ';
+      $set.= $record->status === 'active' ? 'Inactive' : 'Active';
+      $record->edit .= '<a class="btn btn-warning btn-status">'.$set.'</a>';
+    }
+    return $records;
   }
 
   function select2 ($field, $term) {
@@ -60,5 +64,18 @@ class Users extends MY_Model {
     else unset($record['password']);
     return parent::save($record);
   }
+
+  function create ($data) {
+    $data['role'] = 'company';
+    $data['status'] = 'active';
+    return parent::create($data);
+  }
+
+  function status ($uuid) {
+    $record = $this->findOne($uuid);
+    $status = $record['status'] === 'active' ? 'inactive' : 'active';
+    return $this->db->where('uuid', $uuid)->set('status', $status)->update($this->table);
+  }
+
 
 }

@@ -10,13 +10,15 @@ class Products extends MY_Model {
       (object) array('mData' => 'image_file', 'sTitle' => 'Product Image'),
       (object) array('mData' => 'installed_payback_price', 'sTitle' => 'Installed Payback Price'),
       (object) array('mData' => 'availability_value', 'sTitle' => 'Availability'),
-      (object) array('mData' => 'spec_sheet_link', 'sTitle' => 'Spec Sheet')
+      (object) array('mData' => 'spec_sheet_link', 'sTitle' => 'Spec Sheet'),
+      (object) array('mData' => 'edit', 'sTitle' => '')
     );
     $this->form  = array ();
 
     $this->form[]= array(
       'name'    => 'item',
       'label'   => 'Item',
+      'type'    => 'textarea'
     );
 
     $this->form[]= array(
@@ -73,7 +75,8 @@ class Products extends MY_Model {
   	$asset = base_url('asset/file/');
   	$this->db
   		->select("{$this->table}.*")
-  		->select("CASE WHEN 'available' = availability THEN 'Available' WHEN 'out_of_stock' = availability THEN 'Out of Stock' END availability_value", false);
+  		->select("CASE WHEN 'available' = availability THEN 'Available' WHEN 'out_of_stock' = availability THEN 'Out of Stock' END availability_value", false)
+      ->select("'<a class=\"btn btn-primary\">Edit</a>' edit", false);
   	$records = parent::find($param);
   	foreach ($records as &$record) {
   		if (strlen ($record->image) > 0) $record->image_file = '<img width="200" height="100" src="' . $asset.$record->image.'">';

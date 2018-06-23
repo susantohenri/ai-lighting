@@ -9,9 +9,11 @@ class Product extends MY_Controller {
       else $this->$model->save($post);
     }
     $vars = array();
-    $vars['page'] = $this->session->userdata('role') . '/product-table';
+    $role = $this->session->userdata('role');
+    $vars['page'] = $role . '/product-table';
     $vars['records'] = $this->$model->find();
     $vars['thead'] = $this->$model->thead;
+    if ('admin' !== $role) foreach ($vars['thead'] as $key => $value) if ('edit' === $value->mData) unset($vars['thead'][$key]);
     $this->loadview('Template', $vars);
   }
 

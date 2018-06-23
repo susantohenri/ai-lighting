@@ -18,6 +18,8 @@
                 <option <?= $opt['value'] === $field['value'] || (is_array($field['value']) && in_array($opt['value'], $field['value'])) ? 'selected="selected"':'' ?> value="<?= $opt['value'] ?>"><?= $opt['text'] ?></option>
                 <?php endforeach ?>
               </select>
+            <?php elseif('textarea' === $field['type']): ?>
+              <textarea name="<?= $field['name'] ?>" class="form-control" <?= $field['attr'] ?> ><?= $field['value'] ?></textarea>
             <?php endif ?>
           </div>
         </div>

@@ -17,9 +17,6 @@
                 <div class="row">
                     <div class="col-xs-12 box_desc">
                         <div class="row">
-                            <div class="col-xs-12 text-right">
-                                <a href="<?= site_url("{$current['controller']}/create") ?>" class="btn">Add New</a>
-                            </div>
                             <div class="col-xs-12">
                                 <div class="table-responsive" style="overflow-x:auto;max-width:100%">
                                     <table cellspasing="0" class="table table-bordered table-condesed table-hover table-model" border="0" cellpadding="0"></table>
