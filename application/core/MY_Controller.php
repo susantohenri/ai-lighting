@@ -8,7 +8,8 @@ class MY_Controller extends CI_Controller {
     parent::__construct();
     $this->load->helper('url');
     $this->load->library('session');
-    if(empty($this->session->userdata['uuid'] == TRUE)) redirect(site_url('Login'), 'refresh'); 
+    $ses = $this->session->userdata();
+    if (!isset ($ses['uuid'])) redirect(site_url('Login'), 'refresh');
     $this->controller = $this->router->class;
     if (!isset ($this->model)) $this->model = $this->controller . 's';
     $this->load->model($this->model);
