@@ -15,6 +15,7 @@
         	<li><a href="<?= site_url('Product') ?>">HIGH BAYS AND PRICING</a></li>
         	<li><a href="<?= site_url('Company') ?>">SETTINGS</a></li>
         	<li><a href="<?= site_url('User') ?>">REGISTERED USERS</a></li>
+            <li><a href="<?= site_url('Activity') ?>">ACTIVITY LOG</a></li>
         </ul>
         <ul class="nav navbar-right navbar-nav">
           <li class="dropdown">

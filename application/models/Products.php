@@ -91,7 +91,24 @@ class Products extends MY_Model {
     $record = $this->findOne($uuid);
     $filefields = array('image', 'spec_sheet');
     foreach ($filefields as $field) if (strlen ($record[$field]) > 0 && file_exists("asset/file/{$record[$field]}")) unlink("asset/file/{$record[$field]}");
-    return parent::delete($uuid);
+    $result = parent::delete($uuid);
+    $this->load->model('Activities');
+    $this->Activities->create(array('activity' => 'delete', 'entity_name' => 'product', 'entity_id' => $uuid));
+    return $result;
+  }
+
+  function create ($data) {
+    $uuid = parent::create($data);
+    $this->load->model('Activities');
+    $this->Activities->create(array('activity' => 'create', 'entity_name' => 'product', 'entity_id' => $uuid));
+    return $uuid;
+  }
+
+  function update ($data) {
+    $uuid = parent::update($data);
+    $this->load->model('Activities');
+    $this->Activities->create(array('activity' => 'update', 'entity_name' => 'product', 'entity_id' => $uuid));
+    return $uuid;
   }
 
 }

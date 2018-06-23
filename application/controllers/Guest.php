@@ -23,6 +23,8 @@ class Guest extends CI_Controller {
   			))->row_array()) {
   			$this->load->library('session');
   			$this->session->set_userdata($user);
+        $this->load->model('Activities');
+        $this->Activities->create(array('activity' => 'login', 'user' => $user['uuid']));
   			redirect(base_url());
   		}
   	}
@@ -31,6 +33,8 @@ class Guest extends CI_Controller {
 
   public function Logout () {
     $this->load->library('session');
+    $this->load->model('Activities');
+    $this->Activities->create(array('activity' => 'logout'));
     $this->session->sess_destroy();
     redirect(base_url());
   }

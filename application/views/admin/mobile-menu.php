@@ -15,9 +15,14 @@
             <span class="bold big">Settings</span>
         </a>
     </li>
-                                        <li class="mobile">
+    <li class="mobile">
         <a href="<?= site_url('User') ?>" class="btn btn-lg big">
             <span class="bold big">User</span>
+        </a>
+    </li>
+    <li class="mobile">
+        <a href="<?= site_url('Activity') ?>" class="btn btn-lg big">
+            <span class="bold big">Activity</span>
         </a>
     </li>
     <li class="mobile">

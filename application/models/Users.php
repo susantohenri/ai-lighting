@@ -68,13 +68,30 @@ class Users extends MY_Model {
   function create ($data) {
     $data['role'] = 'company';
     $data['status'] = 'active';
-    return parent::create($data);
+    $uuid = parent::create($data);
+    $this->load->model('Activities');
+    $this->Activities->create(array('activity' => 'create', 'entity_name' => 'user', 'entity_id' => $uuid));
+    return $uuid;
   }
 
   function status ($uuid) {
     $record = $this->findOne($uuid);
     $status = $record['status'] === 'active' ? 'inactive' : 'active';
     return $this->db->where('uuid', $uuid)->set('status', $status)->update($this->table);
+  }
+
+  function update ($data) {
+    $uuid = parent::update($data);
+    $this->load->model('Activities');
+    $this->Activities->create(array('activity' => 'update', 'entity_name' => 'user', 'entity_id' => $uuid));
+    return $uuid;
+  }
+
+  function delete ($uuid) {
+    $result = parent::delete($uuid);
+    $this->load->model('Activities');
+    $this->Activities->create(array('activity' => 'delete', 'entity_name' => 'user', 'entity_id' => $uuid));
+    return $result;
   }
 
 

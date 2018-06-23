@@ -46,13 +46,26 @@ class Migration_init extends CI_Migration {
         PRIMARY KEY (`uuid`)
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8
     ");
+
+    $this->db->query("
+      CREATE TABLE `activity` (
+        `uuid` varchar(255) NOT NULL,
+        `user` varchar(255) NOT NULL,
+        `activity` varchar(255) NOT NULL,
+        `entity_name` varchar(255) NOT NULL,
+        `entity_id` varchar(255) NOT NULL,
+        `stamp` datetime NOT NULL,
+        PRIMARY KEY (`uuid`)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+    ");
   }
 
   function down () {
     foreach (array(
       'product',
       'setting',
-      'user'
+      'user',
+      'activity'
     ) as $table) $this->db->query("DROP TABLE `{$table}`");
   }
 
