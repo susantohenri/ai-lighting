@@ -44,7 +44,7 @@ class Users extends MY_Model {
         '<a class=\"btn btn-primary btn-edit\">Edit</a>'
         '<a class=\"btn btn-danger btn-delete\">Delete</a>'
         edit", false)
-  		->join('company', 'company.user = user.uuid', 'left');
+  		->join('company', 'company.uuid = user.company', 'left');
   	$records = parent::find($where);
     foreach ($records as &$record) {
       $set = 'Set ';

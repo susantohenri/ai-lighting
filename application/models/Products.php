@@ -79,10 +79,19 @@ class Products extends MY_Model {
       ->select("'<a class=\"btn btn-primary\">Edit</a>' edit", false);
   	$records = parent::find($param);
   	foreach ($records as &$record) {
-  		if (strlen ($record->image) > 0) $record->image_file = '<img width="200" height="100" src="' . $asset.$record->image.'">';
+      $record->image_file = '';
+  		$record->spec_sheet_link = '';
+      if (strlen ($record->image) > 0) $record->image_file = '<img width="200" height="100" src="' . $asset.$record->image.'">';
   		if (strlen ($record->spec_sheet) > 0) $record->spec_sheet_link = '<a href="'.$asset . $record->spec_sheet .'" target="_blank" class="btn btn-primary">Download</a>';
   	}
   	return $records;
+  }
+
+  function delete ($uuid) {
+    $record = $this->findOne($uuid);
+    $filefields = array('image', 'spec_sheet');
+    foreach ($filefields as $field) if (strlen ($record[$field]) > 0 && file_exists("asset/file/{$record[$field]}")) unlink("asset/file/{$record[$field]}");
+    return parent::delete($uuid);
   }
 
 }

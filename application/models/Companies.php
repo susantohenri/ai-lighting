@@ -12,17 +12,6 @@ class Companies extends MY_Model {
     $this->form  = array ();
 
     $this->form[]= array(
-      'name'    => 'user',
-      'label'   => 'User',
-      'options' => array(array('text' => '', 'value' => '')),
-      'attributes' => array(
-        array('data-autocomplete' => 'true'),
-        array('data-model' => 'Users'),
-        array('data-field' => 'email')
-      ),
-    );
-
-    $this->form[]= array(
       'name'    => 'name',
       'label'   => 'Name',
     );
@@ -45,6 +34,16 @@ class Companies extends MY_Model {
     $this->form[]= array(
       'name'    => 'postcode',
       'label'   => 'Postcode',
+    );
+
+    $this->form[]= array(
+      'name'    => 'firstname',
+      'label'   => 'First Name',
+    );
+
+    $this->form[]= array(
+      'name'    => 'lastname',
+      'label'   => 'Last Name',
     );
 
     $this->form[]= array(

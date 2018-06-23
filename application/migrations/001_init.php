@@ -18,8 +18,9 @@ class Migration_init extends CI_Migration {
     $this->db->query("
       CREATE TABLE `company` (
         `uuid` varchar(255) NOT NULL,
-        `user` varchar(255) NOT NULL,
         `name` varchar(255) NOT NULL,
+        `firstname` varchar(255) NOT NULL,
+        `lastname` varchar(255) NOT NULL,
         `abn` varchar(255) NOT NULL,
         `address` varchar(255) NOT NULL,
         `suburb` varchar(255) NOT NULL,
@@ -40,6 +41,7 @@ class Migration_init extends CI_Migration {
         `role` varchar(255) NOT NULL,
         `firstname` varchar(255) NOT NULL,
         `lastname` varchar(255) NOT NULL,
+        `company` varchar(255) NOT NULL,
         `status` varchar(255) NOT NULL,
         PRIMARY KEY (`uuid`)
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8
