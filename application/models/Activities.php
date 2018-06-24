@@ -14,7 +14,9 @@ class Activities extends MY_Model {
   }
 
   function create ($data) {
-    if (!isset ($data['user'])) $data['user'] = $this->session->userdata('uuid');
+    $ses = $this->session->userdata();
+    if (!isset ($ses['uuid'])) return false;
+    if (!isset ($data['user'])) $data['user'] = $ses['uuid'];
     $data['stamp']= date('Y-m-d H:i:s');
     return parent::create($data);
   }

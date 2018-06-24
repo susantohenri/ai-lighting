@@ -39,4 +39,18 @@ class Guest extends CI_Controller {
     redirect(base_url());
   }
 
+  public function Signup () {
+    if ($post = $this->input->post()) {
+      $this->load->library('session');
+      $this->load->model(array('Users', 'Companies'));
+      $post['user']['company'] = $this->Companies->save($post['company']);
+      $this->Users->save($post['user']);
+      redirect (base_url());
+    }
+    $this->load->view('Signup');
+  }
+
+  public function Agreement () {
+    $this->load->view('Agreement');
+  }
 }
