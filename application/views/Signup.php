@@ -224,6 +224,8 @@
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <div class="col-sm-offset-4 col-sm-4">
+                                                    <input required="" class="form-control input-md" name="user[firstname]" type="text" placeholder="Email">
+                                                    <input required="" class="form-control input-md" name="user[lastname]" type="text" placeholder="Email">
                                                     <input required="" class="form-control input-md email" name="user[email]" type="text" placeholder="Email">
                                                     <input required="" class="form-control input-md" name="user[password]" type="password" placeholder="Password">
                                                     <input required="" class="form-control input-md" name="password2" type="password" placeholder="Password">
@@ -283,6 +285,10 @@
             })
             $('.btn-next').click(function () {
                 var target = $(this).attr('data-target')
+                if ($(this).is('[data-target="#signup3"]')) {
+                    $('[name="user[firstname]"]').val($('[name="company[firstname]"]').val())
+                    $('[name="user[lastname]"]').val($('[name="company[lastname]"]').val())
+                }
                 if ($(this).is('[data-target="#signup4"]')) {
                     if ($('[name="user[password]"]').val() !== $('[name="password2"]').val()) {
                         alert('password does not match')
