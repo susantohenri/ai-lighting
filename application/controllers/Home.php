@@ -15,4 +15,12 @@ class Home extends MY_Controller {
 		$this->loadview('Template', array('page' => 'Intro'));
 	}
 
+	function Instructions () {
+		$this->loadview('Template', array('page' => 'Instructions'));
+	}
+
+	function Project () {
+		$this->loadview('Template', array('page' => 'Project'));
+	}
+
 }

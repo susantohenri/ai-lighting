@@ -16,13 +16,11 @@ canvas.jSignature { height: 500px; }
 .box_graph{
     background: #D4F5C9;
     border : solid 1px #3C911D;
-    border-radius: 5px;
     padding: 10px;
     height: 575px;
 }
 .box_graphic{
     background: #D4F5C9;
-    border-radius: 5px;
     padding: 10px;
     height: 500px;
 }
@@ -89,7 +87,7 @@ h3{
   border: solid 1px #828396;
 }
 .box_desc{
-  background: #dedede;
+  background: #fff;
   padding:3px;
   border: solid 1px #fff;
 }
@@ -107,7 +105,6 @@ label,p{
 .input-sm{
   padding: 2px ;
   height: 25px ;
-  border-radius: 0px;
   border: solid 1px #efefef;
   font-size: 12px;
 }
@@ -399,10 +396,11 @@ P.big{
 li > a {
   padding: 15px 5px !important;
   font-size: 12px !important;
+  border-radius: 0px !important;
 }
 .btn{
-  background-color: #24AEEF !important;
-  border : solid 1px #828396 !important;
+  background-color: #bebebe !important;
+  border : solid 1px #fff !important;
   color:#fff !important;
 }
 .submenu{
@@ -438,9 +436,10 @@ li > a {
   display:block
 }
 .mobile {
-  margin : 10px;
-  border-radius: 10px;
+  margin : 5px 0px;
+  border-radius: 0px !important;
 }
+
 
 
 .nopadding {

@@ -14,7 +14,7 @@
 
     </head>
     <body>
-        <div class="" style="padding:0px 5px;">
+        <div class="container col-md-offset-2 col-md-8" style="padding:0px 5px;">
             <div class="row">
                 <div class="col-sm-12">
                     
