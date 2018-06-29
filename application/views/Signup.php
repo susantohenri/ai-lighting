@@ -279,11 +279,20 @@
     <script type="text/javascript" src="<?= base_url('asset/js/jquery-1.11.1.min.js') ?>"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            $('input').focus(function () {
+                $(this).css('border', '1px solid #ccc')
+            }).keypress(function(e) {
+                if (13 === e.which) {
+                    $('.btn-next:visible').click()
+                    return false
+                }
+            })
             $('#agree_company').click(function () {
                 if ($(this).is(':checked')) $('[data-target="#signup3"]').removeClass('hidden')
                 else $('[data-target="#signup3"]').addClass('hidden')
             })
             $('.btn-next').click(function () {
+                if (!validate ()) return false
                 var target = $(this).attr('data-target')
                 if ($(this).is('[data-target="#signup3"]')) {
                     $('[name="user[firstname]"]').val($('[name="company[firstname]"]').val())
@@ -303,6 +312,15 @@
                 eq--
                 $('.progress-bar').css('width', percent[eq] + '%').html(html)
             })
+            function validate () {
+                var completed = true
+                $('input:visible, select:visible').each(function () {
+                    var valid = $(this).val().length > 0
+                    if (!valid) $(this).css('border', '1px solid red')
+                    completed *= valid
+                })
+                return completed
+            }
         })
     </script>
 </body></html>
