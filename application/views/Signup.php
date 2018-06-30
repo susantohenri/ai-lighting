@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="body-error"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        <title>My Electrician Online Portal</title>
+        <title>Ai - Lighting Portal</title>
         <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
         <meta name="description" content="">
@@ -24,7 +24,7 @@
                         <div class="panel-heading" style="margin-top:5px">
                             <div class="row">
                                 <div class="col-sm-12 text-center">
-                                    <h3 class="bold" style="color:#828396">My Electrician Online Portal Company Sign Up</h3>
+                                    <h3 class="bold" style="color:#828396">Ai - Lighting Portal Company Sign Up</h3>
                                 </div>
                                 <div class="col-sm-12 top">
                                     <div class="progress" style="margin-bottom:0px">
@@ -39,7 +39,7 @@
                             <div class="signup" id="signup1">
                                 <div class="row space">
                                     <div class="col-sm-12 text-center">
-                                        <img src="<?= base_url('asset/img/logo-green.png') ?>" style="height:80px" alt="">
+                                        <img src="<?= base_url('asset/img/ai-lighting.png') ?>" style="height:80px" alt="">
                                         <br>
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@
                                             
                                             <div class="col-sm-12">
                                                 <p class="text-justify top">
-                                                    Welcome to the My Electrician Online Portal Company sign up.
+                                                    Welcome to the Ai - Lighting Portal Company sign up.
                                                 </p>
                                                 <p class="text-justify top">
                                                     The process will only take a few minutes and will allow you to log in to the portal and have access to information about how to access VEET incentives.
@@ -91,15 +91,8 @@
                             <!--signup Step2 setting company-->
                             <div class="signup hidden" id="signup2">
                                 <div class="row">
-                                    <div class="col-sm-4 hidden-xs">
-                                        <img src="<?= base_url('asset/img/logo-green.png') ?>" style="height:80px" alt="">
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <h2 class="text-center bold">VEEC 21</h2>
-                                        <h5 class="text-center bold"> 12V Halogen downlight replacement</h5>
-                                    </div>
-                                    <div class="col-sm-1 hidden-xs">&nbsp;</div>
-                                    <div class="col-sm-3 hidden-xs">
+                                    <div class="col-sm-12 text-center">
+                                        <img src="<?= base_url('asset/img/ai-lighting.png') ?>" style="height:80px" alt=""> <br>
                                     </div>
                                 </div>
 
@@ -108,38 +101,25 @@
                                             <div class="form-group">
                                                 <div class="col-sm-12 text-center"><h4>Electricians Details</h4></div>
                                             </div>
+                                            
                                             <div class="form-group">
-                                                <label for="" class="col-sm-3 bold">First Name</label>
+                                                <label for="" class="col-sm-3 bold">Company Name</label>
                                                 <div class="col-sm-6">
-                                                    <input type="text" class=" form-control input-sm" name="company[firstname]" size="50" value="">
+                                                    <input type="text" class=" form-control validate[required] input-sm" name="company[name]" size="50" value="">
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="" class="col-sm-3 bold">Last Name</label>
+                                                <label for="" class="col-sm-3 bold">Company ABN Number:</label>
                                                 <div class="col-sm-6">
-                                                    <input type="text" class=" form-control input-sm" name="company[lastname]" size="50" value="">
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="" class="col-sm-3 bold">Electricians Company Name</label>
-                                                <div class="col-sm-6">
-                                                    <input type="text" class=" form-control input-sm" name="company[name]" size="50" value="">
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="" class="col-sm-3 bold">ABN Number:</label>
-                                                <div class="col-sm-6">
-                                                    <input type="text" class=" form-control input-sm" name="company[abn]" size="25" value="">
+                                                    <input type="text" class=" form-control validate[required] input-sm" name="company[abn]" size="25" value="">
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="" class="col-sm-3 bold">Company Address</label>
                                                 <div class="col-sm-6">
-                                                    <input type="text" class=" form-control input-sm" name="company[address]" size="50" value="">
+                                                    <input type="text" class=" form-control validate[required] input-sm" name="company[address]" size="50" value="">
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -147,13 +127,32 @@
                                                 <div class="col-sm-offset-3 col-sm-3">
                                                     <label for="" class="bold col-sm-12">Suburb</label>
                                                     <div class="col-sm-12" style="margin-bottom:10px">
-                                                        <input type="text" class=" form-control input-sm" name="company[suburb]" size="25" value="">
+                                                        <input type="text" class=" form-control validate[required] input-sm" name="company[suburb]" size="25" value="">
                                                     </div>
                                                 </div>    
                                                 <div class="col-sm-5">
                                                     <label for="" class="bold col-sm-12">postal code</label>
                                                     <div class="col-sm-7" style="margin-bottom:10px">
-                                                        <input type="text" class=" form-control input-sm" name="company[postcode]" size="25" value="">
+                                                        <input type="text" class=" form-control validate[required] input-sm" name="company[postcode]" size="25" value="">
+                                                    </div>
+                                                <div class="clearfix"></div>
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-3">
+                                                    <label for="" class="bold col-sm-12">Account Signatory</label>
+                                                </div>   
+                                                <div class="col-sm-3">
+                                                    <label for="" class="bold col-sm-12">First Name</label>
+                                                    <div class="col-sm-12" style="margin-bottom:10px">
+                                                        <input type="text" class=" form-control validate[required] input-sm" name="company[firstname]" size="50" value="">
+                                                    </div>
+                                                </div>    
+                                                <div class="col-sm-5">
+                                                    <label for="" class="bold col-sm-12">Last Name</label>
+                                                    <div class="col-sm-7" style="margin-bottom:10px">
+                                                        <input type="text" class=" form-control validate[required] input-sm" name="company[lastname]" size="50" value="">
                                                     </div>
                                                 <div class="clearfix"></div>
 
@@ -162,28 +161,28 @@
                                             <div class="form-group">
                                                 <label for="" class="bold col-sm-3">Telephone Number</label>
                                                 <div class="col-sm-6">
-                                                    <input type="text" class=" form-control input-sm" name="company[phone]" size="25" value=""> 
+                                                    <input type="text" class=" form-control validate[required] input-sm" name="company[phone]" size="25" value=""> 
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="" class="bold col-sm-3">Email Address</label>
                                                 <div class="col-sm-6">
-                                                    <input type="text" class="validate[required,custom[email]] form-control input-sm" name="company[email]" size="50" value="">
+                                                    <input type="text" class="validate[required,custom[email]] form-control validate[required] input-sm" name="company[email]" size="50" value="">
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="" class="bold col-sm-3">R.E.C Number</label>
                                                 <div class="col-sm-6">
-                                                    <input type="text" class=" form-control input-sm" name="company[rec_no]" size="25" value="">
+                                                    <input type="text" class=" form-control validate[required] input-sm" name="company[rec_no]" size="25" value="">
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="" class="bold col-sm-3">A liscense No</label>
+                                                <label for="" class="bold col-sm-3">A license No</label>
                                                 <div class="col-sm-6">
-                                                    <input type="text" class=" form-control input-sm" name="company[a_class_lic_no]" size="25" value="">
+                                                    <input type="text" class=" form-control validate[required] input-sm" name="company[a_class_lic_no]" size="25" value="">
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -195,7 +194,7 @@
                                                         <div class="col-sm-12 text-center">
                                                             <div class="checkbox">
                                                                 <label>
-                                                                  <input type="checkbox" id="agree_company"> ‘I agree to My Electrician’s <a href="<?= site_url('Agreement') ?>" target="_blank" style="color:#0000FF">Terms and Conditions</a>’ 
+                                                                  <input type="checkbox" id="agree_company"> ‘I agree to Ai Lighting <a href="<?= site_url('Agreement') ?>" target="_blank" style="color:#0000FF">Terms and Conditions</a>’ 
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -258,7 +257,7 @@
                                         <p class="">
                                             Kind Regards,
                                             <br>
-                                            The My Electrician Team
+                                            Ai Lighting Team
                                         </p>
                                     </div>
                                 </div>
