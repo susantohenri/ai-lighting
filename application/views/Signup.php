@@ -223,9 +223,11 @@
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <div class="col-sm-offset-4 col-sm-4">
-                                                    <input required="" class="form-control validate[required] input-md email" name="user[email]" type="text" placeholder="Email">
-                                                    <input required="" class="form-control validate[required] input-md" name="user[password]" type="password" placeholder="Password">
-                                                    <input required="" class="form-control validate[required] input-md" name="password2" type="password" placeholder="Password">
+                                                    <input required="" class="form-control input-md" name="user[firstname]" type="text" placeholder="Email">
+                                                    <input required="" class="form-control input-md" name="user[lastname]" type="text" placeholder="Email">
+                                                    <input required="" class="form-control input-md email" name="user[email]" type="text" placeholder="Email">
+                                                    <input required="" class="form-control input-md" name="user[password]" type="password" placeholder="Password">
+                                                    <input required="" class="form-control input-md" name="password2" type="password" placeholder="Password">
                                                     <div class="clear"></div>
                                                 </div>
                                             </div>
@@ -276,12 +278,25 @@
     <script type="text/javascript" src="<?= base_url('asset/js/jquery-1.11.1.min.js') ?>"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            $('input').focus(function () {
+                $(this).css('border', '1px solid #ccc')
+            }).keypress(function(e) {
+                if (13 === e.which) {
+                    $('.btn-next:visible').click()
+                    return false
+                }
+            })
             $('#agree_company').click(function () {
                 if ($(this).is(':checked')) $('[data-target="#signup3"]').removeClass('hidden')
                 else $('[data-target="#signup3"]').addClass('hidden')
             })
             $('.btn-next').click(function () {
+                if (!validate ()) return false
                 var target = $(this).attr('data-target')
+                if ($(this).is('[data-target="#signup3"]')) {
+                    $('[name="user[firstname]"]').val($('[name="company[firstname]"]').val())
+                    $('[name="user[lastname]"]').val($('[name="company[lastname]"]').val())
+                }
                 if ($(this).is('[data-target="#signup4"]')) {
                     if ($('[name="user[password]"]').val() !== $('[name="password2"]').val()) {
                         alert('password does not match')
@@ -296,6 +311,15 @@
                 eq--
                 $('.progress-bar').css('width', percent[eq] + '%').html(html)
             })
+            function validate () {
+                var completed = true
+                $('input:visible, select:visible').each(function () {
+                    var valid = $(this).val().length > 0
+                    if (!valid) $(this).css('border', '1px solid red')
+                    completed *= valid
+                })
+                return completed
+            }
         })
     </script>
 </body></html>

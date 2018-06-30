@@ -8,6 +8,7 @@ class Users extends MY_Model {
     $this->thead = array(
       (object) array('mData' => 'email', 'sTitle' => 'Email'),
       (object) array('mData' => 'company_name', 'sTitle' => 'Company'),
+      (object) array('mData' => 'role_name', 'sTitle' => 'Role'),
       (object) array('mData' => 'status_value', 'sTitle' => 'Status'),
       (object) array('mData' => 'edit', 'sTitle' => '')
     );
@@ -40,6 +41,7 @@ class Users extends MY_Model {
   		->select("{$this->table}.*")
   		->select('company.name company_name', false)
       ->select("CASE WHEN 'active' = status THEN 'Active' WHEN 'inactive' = status THEN 'Inactive' END status_value", false)
+      ->select("CASE WHEN 'admin' = role THEN 'Super Admin' WHEN 'company' = role THEN 'Company Admin' END role_name", false)
       ->select("
         '<a class=\"btn btn-primary btn-edit\">Edit</a>'
         '<a class=\"btn btn-danger btn-delete\">Delete</a>'

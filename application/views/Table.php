@@ -40,7 +40,6 @@
 <link href="<?= base_url('asset/css/dataTables.bootstrap.min.css') ?>" rel="stylesheet">
 <link href="<?= base_url('asset/css/datatables.responsive.css') ?>" rel="stylesheet">
 <script type="text/javascript" src="<?= base_url('asset/js/jquery.dataTables.min.js') ?>"></script>
-<script type="text/javascript" src="<?= base_url('asset/js/dataTables.bootstrap.js') ?>"></script>
 <script type="text/javascript" src="<?= base_url('asset/js/datatables.responsive.js') ?>"></script>
 <script type="text/javascript">
   window.onload = function () {

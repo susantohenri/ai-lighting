@@ -24,7 +24,7 @@
             </div>
             
             <div class="row">
-                <?= include_once (APPPATH . "views/{$page}.php") ?>
+                <?php include_once (APPPATH . "views/{$page}.php") ?>
             </div>
         </div>
 </body></html>

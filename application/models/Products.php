@@ -81,7 +81,7 @@ class Products extends MY_Model {
   	foreach ($records as &$record) {
       $record->image_file = '';
   		$record->spec_sheet_link = '';
-      if (strlen ($record->image) > 0) $record->image_file = '<img width="200" height="100" src="' . $asset.$record->image.'">';
+      if (strlen ($record->image) > 0) $record->image_file = '<img class="img-responsive" src="' . $asset.$record->image.'">';
   		if (strlen ($record->spec_sheet) > 0) $record->spec_sheet_link = '<a href="'.$asset . $record->spec_sheet .'" target="_blank" class="btn btn-primary">Download</a>';
   	}
   	return $records;
