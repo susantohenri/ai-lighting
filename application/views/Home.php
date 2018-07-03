@@ -4,7 +4,7 @@
     		<div class="col-sm-12 text-center">
     			<br>
     			<img src="<?= base_url('asset/img/ai-lighting-150.png') ?>" alt="" class="text-center"><br> <br>
-    			<h4 class="text-center">LED High Bays Replacement Program</h4>
+    			<h4 class="text-center">LED High Bay Replacement Program</h4>
     			<br>
     		</div>
     		

@@ -17,12 +17,17 @@
     </li>
     <li class="mobile">
         <a href="<?= site_url('Home/Project') ?>" class="btn btn-lg big">
-            <span class="bold big">Project Applications</span> 
+            <span class="bold big">Project Application Form</span> 
         </a>
     </li>
     <li class="mobile">
         <a href="<?= site_url('Company') ?>" class="btn btn-lg big">
             <span class="bold big">Settings</span>
+        </a>
+    </li>
+    <li class="mobile">
+        <a href="<?= base_url('asset/file/Doccument_Pack_V1.pdf') ?>" target="_blank" class="btn btn-lg big">
+            <span class="bold big">Download Document Pack</span>
         </a>
     </li>
     <li class="mobile">

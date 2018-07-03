@@ -9,9 +9,9 @@
 <p>The ai Lighting highbay replacement program is designed to provide Victorian electricians an opportunity to compete against the large lighting upgrade companies in the very lucrative, LED highbay upgrade space.</p>
 <p>The program will suit Electricians that:</p>
 <ul>
-<li style="text-indent: -18.0pt;">Have access to job leads.</li>
-<li style="text-indent: -18.0pt;">Are keen sales people and willing to generate their own leads.</li>
-<li style="text-indent: -18.0pt;">Are already generating leads but would like better value.</li>
+<li>Have access to job leads.</li>
+<li>Are keen sales people and willing to generate their own leads.</li>
+<li>Are already generating leads but would like better value.</li>
 </ul>
 <p>ai Lighting does not provide job leads but can assist those willing to sell with sales tools and walk in sales strategy.</p>
 <p>The program is best suited to Registered Electrical Contracting Companies (REC&rsquo;s) but there are also options for Licenced A Class Electricians to participate under a different arrangement as ai Lighting is also a REC.</p>
@@ -23,14 +23,14 @@
 <p><strong>Eligible businesses</strong></p>
 <p>Most commercial buildings are eligible to create VEECS. The Exceptions are:</p>
 <ul>
-<li style="text-indent: -18.0pt;">Lighting already replaced under the VEET</li>
-<li style="text-indent: -18.0pt;">Sites that are registered in the EREP list (see here)</li>
+<li>Lighting already replaced under the VEET</li>
+<li>Sites that are registered in the EREP list (see here)</li>
 </ul>
 <p>Not all sites create the same amount of VEECs. There are three main categories:</p>
 <ul>
-<li style="text-indent: -18.0pt;">5000 hours: Warehouses, Retail, Storage, Manufacturing work shops</li>
-<li style="text-indent: -18.0pt;">3000 hours: Automotive repairs and servicing</li>
-<li style="text-indent: -18.0pt;">2000 hours: Halls and Gyms</li>
+<li>5000 hours: Warehouses, Retail, Storage, Manufacturing work shops</li>
+<li>3000 hours: Automotive repairs and servicing</li>
+<li>2000 hours: Halls and Gyms</li>
 </ul>
 <p>Its important to understand these categories to make sure you don&rsquo;t underestimate a job or over-promise an upgrade to a prospective customer.</p>
 <p>Itemised pricing for each operating hour category will be available on the pricing page and a confirmation of the annual operating hours can be easily made during the initial project discussion.</p>
@@ -45,18 +45,9 @@
 <p>Products are listed on the &lsquo;Highbays and Pricing&rsquo; section of the app. Each item will has details such as availability, Spec sheet and Installed payback price.</p>
 <p>The &lsquo;Installed payback price&rsquo; is what you earn per fitting ex GST. This price already includes cost of the fitting and the ai Lighting submission fee. Your installation costs must be factored into this price. These include time, access equipment and any ancillary costs associated with the installation including any minimum quantity charges that are mentioned above.</p>
 
-<table class="table table-responsive table-bordered">
-	<thead class="text-center">
-	<th class="text-center">Highbay Quantity</th>
-	<th class="text-center">Pay back price per fitting</th>
-	<th class="text-center">Total</th>
-	</thead>
-	<tbody class="text-center">
-		<td>30</td>
-		<td>$200.00</td>
-		<td>$ 6,000.00</td>
-	</tbody>
-</table>
+
+
+<img src="<?= base_url('asset/img/table-payback.png') ?>" class="img-responsive" alt=""> <br>
 <p>Depending on the value of the &lsquo;Pay back Price&rsquo; per fitting, you can choose to conduct the entire installation at no charge for the customer if the total amount will cover all your installation costs and provide you a profit.</p>
 <p>If you wish to charge a co-payment, you are entitled to do so as long as it is provided to the customer in a quotation, is approved and a copy of the customer invoice is provided to ai Lighting to be submitted with evidence.</p>
 <p>Depending on the size of the job, materials and can be delivered to site. This will be assessed and negotiated on a job by job basis.</p>
