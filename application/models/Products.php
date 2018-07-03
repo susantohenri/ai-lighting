@@ -8,6 +8,7 @@ class Products extends MY_Model {
     $this->thead = array(
       (object) array('mData' => 'item', 'sTitle' => 'Item'),
       (object) array('mData' => 'image_file', 'sTitle' => 'Product Image'),
+      (object) array('mData' => 'application', 'sTitle' => 'Appliaction'),
       (object) array('mData' => 'installed_payback_price', 'sTitle' => 'Installed Payback Price'),
       (object) array('mData' => 'availability_value', 'sTitle' => 'Availability'),
       (object) array('mData' => 'spec_sheet_link', 'sTitle' => 'Spec Sheet'),
@@ -30,6 +31,11 @@ class Products extends MY_Model {
     $this->form[]= array(
       'name'    => 'installed_payback_price',
       'label'   => 'Installed Payback Price',
+    );
+
+    $this->form[]= array(
+      'name'    => 'application',
+      'label'   => 'Application',
     );
 
     $this->form[]= array(
@@ -81,7 +87,7 @@ class Products extends MY_Model {
   	foreach ($records as &$record) {
       $record->image_file = '';
   		$record->spec_sheet_link = '';
-      if (strlen ($record->image) > 0) $record->image_file = '<img class="img-responsive" src="' . $asset.$record->image.'">';
+      if (strlen ($record->image) > 0) $record->image_file = '<img width="150" class="img-responsive text-center" src="' . $asset.$record->image.'">';
   		if (strlen ($record->spec_sheet) > 0) $record->spec_sheet_link = '<a href="'.$asset . $record->spec_sheet .'" target="_blank" class="btn btn-primary">Download</a>';
   	}
   	return $records;

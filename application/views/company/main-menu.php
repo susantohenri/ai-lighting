@@ -17,8 +17,9 @@
             <li><a href="<?= site_url('Home/Intro') ?>">ABOUT</a></li>
             <li><a href="<?= site_url('Home/Instructions') ?>">INSTRUCTIONS</a></li>
             <li><a href="<?= site_url('Product') ?>">HIGH BAYS AND PRICING</a></li>
-            <li><a href="<?= site_url('Home/Project') ?>">PROJECT APPLICATIONS</a></li>
+            <li><a href="<?= site_url('Home/Project') ?>">PROJECT APPLICATION FORM</a></li>
             <li><a href="<?= site_url('Company') ?>">SETTINGS</a></li>
+            <li><a href="<?= base_url('asset/file/Doccument_Pack_V1.pdf') ?>" target="_blank">DOWNLOAD DOCUMENT PACK</a></li>
         </ul>
         <ul class="nav navbar-right navbar-nav hidden-lg">
           <li class="dropdown">
@@ -34,8 +35,9 @@
                 <li><a href="<?= site_url('Home/Intro') ?>">ABOUT</a></li>
                 <li><a href="<?= site_url('Home/Instructions') ?>">INSTRUCTIONS</a></li>
                 <li><a href="<?= site_url('Product') ?>">HIGH BAYS AND PRICING</a></li>
-                <li><a href="<?= site_url('Home/Project') ?>">PROJECT APPLICATIONS</a></li>
+                <li><a href="<?= site_url('Home/Project') ?>">PROJECT APPLICATION FORM</a></li>
                 <li><a href="<?= site_url('Company') ?>">SETTINGS</a></li>
+                <li><a href="<?= base_url('asset/file/Doccument_Pack_V1.pdf') ?>" target="_blank">DOWNLOAD DOCUMENT PACK</a></li>
                 <li>
                     <a href="<?= site_url('Guest/Logout') ?>" data-toggle="tooltip" data-placement="left" title="logout"><i class="glyphicon glyphicon-log-out" style="padding:5px 10px"></i></a>
                 </li>
