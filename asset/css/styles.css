@@ -451,3 +451,7 @@ li > a {
 .street span.select2-chosen {
   background-color: #FFF7B3
 }
+
+table.table.table-bordered.table-condesed.table-hover.table-model.dataTable.no-footer tbody td {
+  padding-left: 5px !important
+}

@@ -81,6 +81,7 @@ class Products extends MY_Model {
   	$asset = base_url('asset/file/');
   	$this->db
   		->select("{$this->table}.*")
+      ->select("CONCAT('$', FORMAT(installed_payback_price, 2)) installed_payback_price", false)
   		->select("CASE WHEN 'available' = availability THEN 'Available' WHEN 'out_of_stock' = availability THEN 'Out of Stock' END availability_value", false)
       ->select("'<a class=\"btn btn-primary\">Edit</a>' edit", false);
   	$records = parent::find($param);

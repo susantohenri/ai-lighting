@@ -8,9 +8,10 @@ class Migration_init extends CI_Migration {
         `uuid` varchar(255) NOT NULL,
         `item` varchar(255) NOT NULL,
         `image` varchar(255) NOT NULL,
-        `installed_payback_price` int(11) NOT NULL,
+        `installed_payback_price` FLOAT NOT NULL,
         `availability` varchar(255) NOT NULL,
         `spec_sheet` varchar(255) NOT NULL,
+        `application` varchar(255) NOT NULL,
         PRIMARY KEY (`uuid`)
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8
     ");
