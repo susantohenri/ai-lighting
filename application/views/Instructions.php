@@ -257,34 +257,34 @@ performance.</p>
   </div>
   <br>
 
-  <div class="row">
-    <div class="col-md-offset-1 col-md-10" style="border-style:outset;">
+  <div class="row"> 
+    <div class="col-md-offset-1 col-md-10 text-center img-responsive" style="border-style:outset;">
       <br>
-          <img src="<?= base_url('asset/img/background05.jpg') ?>" alt="" class="img-responsive">
+          <img src="<?= base_url('asset/img/back05.jpg') ?>" alt="" class="img-responsive">
     </div>
   </div>
   <br>
 
   <div class="row">
-    <div class="col-md-offset-1 col-md-10" style="border-style:outset;">
+    <div class="col-md-offset-1 col-md-10 text-center img-responsive" style="border-style:outset;">
       <br>
-          <img src="<?= base_url('asset/img/background06.jpg') ?>" alt="" class="img-responsive">
+          <img src="<?= base_url('asset/img/back06.jpg') ?>" alt="" class="img-responsive">
     </div>
   </div>
   <br>
 
   <div class="row">
-    <div class="col-md-offset-1 col-md-10" style="border-style:outset;">
+    <div class="col-md-offset-1 col-md-10 text-center" style="border-style:outset;">
       <br>
-          <img src="<?= base_url('asset/img/background07.jpg') ?>" alt="" class="img-responsive">
+          <img src="<?= base_url('asset/img/back07.jpg') ?>" alt="" class="img-responsive">
     </div>
   </div>
   <br>
 
   <div class="row">
-    <div class="col-md-offset-1 col-md-10" style="border-style:outset;">
+    <div class="col-md-offset-1 col-md-10 text-center" style="border-style:outset;">
       <br>
-          <img src="<?= base_url('asset/img/background08.jpg') ?>" alt="" class="img-responsive">
+          <img src="<?= base_url('asset/img/back08.jpg') ?>" alt="" class="img-responsive">
     </div>
   </div>
   <br>
@@ -298,9 +298,9 @@ performance.</p>
   <br>
 
   <div class="row">
-    <div class="col-md-offset-1 col-md-10" style="border-style:outset;">
+    <div class="col-md-offset-1 col-md-10 text-center img-responsive" style="border-style:outset;">
       <br>
-          <img src="<?= base_url('asset/img/background10.jpg') ?>" alt="" class="img-responsive">
+          <img src="<?= base_url('asset/img/back10.jpg') ?>" alt="" class="img-responsive">
     </div>
   </div>
   <br>
