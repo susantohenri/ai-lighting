@@ -32,7 +32,7 @@
                                     <div class="col-sm-offset-1 col-sm-10">
                                         <p>&nbsp;</p>
 <p>RA 4 - 250915 Page 1 of 17</p>
-<p style="text-align: center;">IN TERMS OF AN AGREEMENT made this day of 2015.</p>
+<p style="text-align: center;">IN TERMS OF AN AGREEMENT made this day of 2018.</p>
 <p style="text-align: center;">BETWEEN:</p>
 <p style="text-align: center;">Ai Lighting</p>
 <p style="text-align: center;">ABN __________ (client to insert)</p>
