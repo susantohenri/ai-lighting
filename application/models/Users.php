@@ -69,7 +69,7 @@ class Users extends MY_Model {
 
   function create ($data) {
     $data['role'] = 'company';
-    $data['status'] = 'active';
+    $data['status'] = 'inactive';
     $uuid = parent::create($data);
     $this->load->model('Activities');
     $this->Activities->create(array('activity' => 'create', 'entity_name' => 'user', 'entity_id' => $uuid));

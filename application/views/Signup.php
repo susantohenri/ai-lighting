@@ -68,7 +68,7 @@
                                                     Thank's
                                                 </p>
                                                <p>
-                                                   The My Electrician Team
+                                                   Ai Lighting
                                                </p>
 
                                             </div>

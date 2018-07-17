@@ -17,7 +17,8 @@
           <input type="email" name="email" class="form-control input-md email" required="" placeholder="Email Address" autofocus="">
           <input type="password" name="password" class="form-control input-md password" required="" placeholder="Password">
           <input type="submit" value="Sign in" class="login-submit">
-          <p class="login-help"><a href="http://localhost/ailighting/index.php/authcontroller/forgot_password">Forgot password?</a></p>
+          <p class="login-help"><a href="http://ai.lighting/index.php/authcontroller/forgot_password">Forgot password?</a></p>
+          <p class="login-help"><a href="http://ai.lighting/index.php/Guest/Signup">Signup</a></p>
         </form>
       </div>
     </div>

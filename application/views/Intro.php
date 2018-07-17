@@ -24,7 +24,7 @@
 <p>Most commercial buildings are eligible to create VEECS. The Exceptions are:</p>
 <ul>
 <li>Lighting already replaced under the VEET</li>
-<li>Sites that are registered in the EREP list (see here)</li>
+<li>Sites that are registered in the EREP list (<a href="https://www.epa.vic.gov.au/our-work/programs/~/media/Files/bus/EREP/docs/EREPregisteredsites.pdf" target="_blank">see here)</a> </li>
 </ul>
 <p>Not all sites create the same amount of VEECs. There are three main categories:</p>
 <ul>
@@ -54,13 +54,13 @@
 <p>A number of evidence items are required to make a claim. A more detailed description of this can be found in the &lsquo;Process instructions&rsquo; section of the app.</p>
 <p>Each project requires</p>
 <ul>
-<li style="text-indent: -18.0pt;">Before photos</li>
-<li style="text-indent: -18.0pt;">After photos</li>
-<li style="text-indent: -18.0pt;">Hand drawn before and after floor plan</li>
-<li style="text-indent: -18.0pt;">CES copy</li>
-<li style="text-indent: -18.0pt;">Invoice copy</li>
-<li style="text-indent: -18.0pt;">A copy of the lease or evidence of the building class (will be discussed in the initial conversation)</li>
-<li style="text-indent: -18.0pt;">Drop off or collection of the removed lighting (for recycling)</li>
+<li>Before photos</li>
+<li>After photos</li>
+<li>Hand drawn before and after floor plan</li>
+<li>CES copy</li>
+<li>Invoice copy</li>
+<li>A copy of the lease or evidence of the building class (will be discussed in the initial conversation)</li>
+<li>Drop off or collection of the removed lighting (for recycling)</li>
 </ul>
 <p>ai Lighting digitises the floor plans, produces a simulated lighting report and compiles the documentation into a pack and submits it to be processed.</p>
 <p>If further information is required, ai Lighting will work closely with you to collect any more information required.</p>
